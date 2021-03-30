@@ -21,6 +21,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM bukiu ORDER BY id_buku DESC ");
 	<th>Penerbit Buku</th>
 	<th>Tahun Penerbit</th>
 	<th>Stok</th>
+	<th>Opsi</th>
 </tr>
 <?php
 while($user_data = mysqli_fetch_array($result))
