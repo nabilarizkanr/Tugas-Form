@@ -7,7 +7,7 @@
     <a href="index.php">Go To Home</a>
     <br><br>
     
-<form action="action-input-data.php" method="POST" name="form-input-data">
+<form action="add.php" method="POST" name="form-input-data">
     <table>
         <tr>
                 <td> </td>
