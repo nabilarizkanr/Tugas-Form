@@ -19,11 +19,12 @@ $result = mysqli_query($mysqli, "SELECT * FROM bukiu ORDER BY id_buku DESC ");
 <nav class="navbar navbar-expand-sm bg-dark">
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a href="form_buku.php" class="btn btn-info" role="button">Add New Book</a>
+      <a href="form_buku.php" class="btn btn-light" role="button">Add New Book</a>
     </li>
   </ul>
 </nav>
 <br>
+<div class="container-sm mt-3 ">
 <table class="table table-bordered">
     <thead class="thead-dark">
 <tr>
@@ -48,10 +49,11 @@ while($user_data = mysqli_fetch_array($result))
 	echo "<td>".$user_data['penerbit_buku']."</td>";
 	echo "<td>".$user_data['tahun_penerbit']."</td>";
 	echo "<td>".$user_data['stok']."</td>";
-	echo "<td><a href='edit.php?id=$user_data[id_buku]'>Edit</a>";
-	echo "<td><a href='delete.php?id=$user_data[id_buku]'>Delete</a></td></tr>";
+	echo "<td><a class='btn btn-info' href='edit.php?id=$user_data[id_buku]'>Edit</a>";
+	echo "<td><a class='btn btn-danger' href='delete.php?id=$user_data[id_buku]'>Delete</a></td></tr>";
 }
 ?>
 </table>
+</div>
 </body>
 </html>
