@@ -16,20 +16,25 @@ $result = mysqli_query($mysqli, "SELECT * FROM bukiu ORDER BY id_buku DESC ");
 	<title>Homepage</title>
 </head>
 <body>
-<div class="container">
-<a href="form_buku.php">Add New Book</a><br><br>
+<nav class="navbar navbar-expand-sm bg-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a href="form_buku.php" class="btn btn-info" role="button">Add New Book</a>
+    </li>
+  </ul>
+</nav>
+<br>
 <table class="table table-bordered">
     <thead class="thead-dark">
 <tr>
-	<th>ID Buku</th>
-	<th>Kode Buku</th>
-	<th>Judul Buku</th>
-	<th>Penulis Buku</th>
-	<th>Penerbit Buku</th>
-	<th>Tahun Penerbit</th>
-	<th>Stok</th>
-	<th>Fungsi</th>
-	<th></th>
+	<th><center>ID Buku</center></th>
+	<th><center>Kode Buku</center></th>
+	<th><center>Judul Buku</center></th>
+	<th><center>Penulis Buku</center></th>
+	<th><center>Penerbit Buku</center></th>
+	<th><center>Tahun Penerbit</center></th>
+	<th><center>Stok</center></th>
+	<th colspan="2"><center>Fungsi</center></th>
 </tr>
 	</thead>
 <?php
