@@ -1,10 +1,6 @@
 <?php
 include_once("config.php");
-
-//all users data from db 
-$result = mysqli_query($mysqli, "SELECT * FROM bukiu ORDER BY id_buku DESC "); 
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
