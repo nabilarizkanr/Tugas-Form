@@ -1,10 +1,8 @@
 <?php
-/** Using mysqli_connect for database connection **/
+	$server = "localhost";
+	$user	= "root";
+	$pass	= "";
+	$database = "tugas_mini";
 
-$databaseHost = 'localhost';
-$databaseName = 'tugas_mini';
-$databaseUsername = 'root';
-$databasePassword = '';
-
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+	$koneksi = mysqli_connect($server, $user, $pass, $database)or die(mysqli_error($koneksi));
 ?>
