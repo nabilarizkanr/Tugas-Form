@@ -23,20 +23,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM bukiu ORDER BY id_buku DESC ");
 	<th>Stok</th>
 	<th>Opsi</th>
 </tr>
-<?php
-while($user_data = mysqli_fetch_array($result))
-{
-	echo "<tr>";
-	echo "<td>".$user_data['id_buku']."</td>";
-	echo "<td>".$user_data['kode_buku']."</td>";
-	echo "<td>".$user_data['judul_buku']."</td>";
-	echo "<td>".$user_data['penulis_buku']."</td>";
-	echo "<td>".$user_data['penerbit_buku']."</td>";
-	echo "<td>".$user_data['tahun_penerbit']."</td>";
-	echo "<td>".$user_data['stok']."</td>";
-	echo "<td><a href='edit.php?id=$user_data[id_buku]'>Edit</a> | <a href='delete.php?id=$user_data[id_buku]'>Delete</a></td></tr>";  
-}
-?>
+
 </table>
 </body>
 </html>
