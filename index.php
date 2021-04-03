@@ -21,13 +21,13 @@ if(isset($_POST['submit']))
         {
             echo "<script>
                     alert('Edit Data Sukses');
-                    document.location='indexx.php';
+                    document.location='index.php';
                     </script>";
         }else
         {
             echo "<script>
                     alert('Edit Data Gagal');
-                    document.location='indexx.php';
+                    document.location='index.php';
                     </script>";
         }
     }else
@@ -46,13 +46,13 @@ if(isset($_POST['submit']))
         {
             echo "<script>
                     alert('Simpan Data Sukses');
-                    document.location='indexx.php';
+                    document.location='index.php';
                     </script>";
         }else
         {
             echo "<script>
                     alert('Simpan Data Gagal');
-                    document.location='indexx.php';
+                    document.location='index.php';
                     </script>";
         }
     }
@@ -82,7 +82,7 @@ if(isset($_POST['submit']))
             {
                echo "<script>
                     alert('Sukses Hapus Data!');
-                    document.location = 'indexx.php';
+                    document.location = 'index.php';
                     </script>";
              }
         }
