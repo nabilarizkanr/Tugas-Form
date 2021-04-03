@@ -92,87 +92,20 @@ if(isset($_POST['submit']))
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<title>Homepage</title>
 </head>
 <body>
-<form action="index.php" method="POST" name="form-input-data">
-    <table>
-        <tr>
-                <td> </td>
-                <td> </td>
-                <td><font>Form Input Data Buku</font></td>
-        </tr>
-        <tr>
-            <td> </td>
-            <td>Kode Buku</td>
-            <td><input type="text" name="kode_buku" value="<?=@$ekode_buku?>" maxlength="6" /></td>
-        </tr>
-        <tr>
-            <td> </td>
-            <td>Judul Buku</td>
-            <td><input type="text" name="judul_buku" value="<?=@$ejudul_buku?>" maxlength="30" /></td>
-        </tr>
-        <tr>
-            <td> </td>
-            <td>Penulis Buku</td>
-            <td><input type="text" name="penulis_buku" value="<?=@$epenulis_buku?>" maxlength="30" /></td>
-        </tr>
-        <tr>
-            <td> </td>
-            <td>Penerbit Buku</td>
-            <td><input type="text" name="penerbit_buku" value="<?=@$epenerbit_buku?>" maxlength="30" /></td>
-        </tr>
-        <tr>
-            <td> </td>
-            <td>Tahun Terbit</td>
-            <td><input type="text" name="tahun_penerbit" value="<?=@$etahun_penerbit?>" maxlength="12" /></td>
-        </tr>
-        <tr>
-            <td> </td>
-            <td>Stok</td>
-            <td><input type="text" name="stok" value="<?=@$estok?>" maxlength="12" /></td>
-        </tr>
-        <tr>
-            <td> </td>
-            <td> </td>
-            <td><input type="submit" name="submit" value="Submit">   
-                <input type="reset" name="reset" value="Cancel"></td>
-        </tr>
-    </table>
-</form>
-        <tr>
-                <td><font>Data Buku</font></td>
-        </tr>
-<table width="80%" border="1">
 
-		<tr>
-			<th>ID Buku</th>
-			<th>Kode Buku</th>
-			<th>Judul Buku</th>
-			<th>Penulis Buku</th>
-			<th>Penerbit Buku</th>
-			<th>Tahun Penerbit</th>
-			<th>Stok</th>
-			<th>Opsi</th>
-		</tr>
         <?php
             $no = 1;
             $tampil = mysqli_query($koneksi, "SELECT * FROM bukiu ORDER BY id_buku");
             while($data = mysqli_fetch_array($tampil)):
         ?>
-        <tr>
-            <td><?=$no++;?></td>
-            <td><?=$data['kode_buku']?></td>
-            <td><?=$data['judul_buku']?></td>
-            <td><?=$data['penulis_buku']?></td>
-            <td><?=$data['penerbit_buku']?></td>
-            <td><?=$data['tahun_penerbit']?></td>
-            <td><?=$data['stok']?></td>
-            <td><a href='index.php?hal=edit&id_buku=<?=$data['id_buku']?>'>Edit</a> | 
-                <a href='index.php?hal=hapus&id_buku=<?=$data['id_buku']?>' 
-                onclick="return confirm('Apakah yakin ingin menghapus data ini?')">Delete</a></td>
-       </tr>
-   <?php endwhile; ?>
 
 </table>
 </body>
