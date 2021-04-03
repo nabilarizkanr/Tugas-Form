@@ -136,10 +136,6 @@ if(isset($_POST['submit']))
     <label>Stok</label>
     <input type="text" class="form-control" name="stok" value="<?=@$estok?>" maxlength="12"  placeholder="Masukkan stok buku">
   </div>
-  <div class="form-group">
-    <label>Penerbit Buku</label>
-    <input type="text" class="form-control" placeholder="Masukkan penerbit buku">
-  </div>
   <br><center>
   <input type="submit" name="Submit" value="submit" class="btn btn-info">   
                 <input type="reset" name="reset" value="Cancel" class="btn btn-danger"></td>
