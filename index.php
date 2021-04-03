@@ -178,7 +178,7 @@ if(isset($_POST['submit']))
 			<td><?=$data['penerbit_buku']?></td>
 			<td><?=$data['tahun_penerbit']?></td>
 			<td><?=$data['stok']?></td>
-			<td><a  class='btn btn-info' href='index.php?hal=edit&id_buku=<?=$data['id_buku']?>'>Edit</a> | <a  class='btn btn-danger' href='index.php?hal=hapus&id_buku=<?=$data['id_buku'?>' onclick="return confirm('Apakah yakin ingin menghapus data ini?')">Delete</a></td>
+			<td><a  class='btn btn-info' href='index.php?hal=edit&id_buku=<?=$data['id_buku']?>'>Edit</a> | <a  class='btn btn-danger' href='index.php?hal=hapus&id_buku=<?=$data['id_buku]'?>' onclick="return confirm('Apakah yakin ingin menghapus data ini?')">Delete</a></td>
 		</tr>
 
 		<?php endwhile; // penutup perulangan 
