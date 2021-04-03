@@ -53,6 +53,7 @@
   <input type="submit" name="Submit" value="Add" class="btn btn-info">   
                 <input type="reset" name="reset" value="Cancel" class="btn btn-danger"></td>
         </tr>
+
 </form>
 </div>
     <?php
